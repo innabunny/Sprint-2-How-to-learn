@@ -1,4 +1,4 @@
-.page {
+.body {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
   /* поэтому выше установлена минимальная ширина страницы */
@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  z-index: 2;
+  z-index: 1;
   /* выше установили ограничения для секции */
 }
 
@@ -37,18 +37,18 @@
 }
 
 .header__title{
-  display: flex;
   margin-left: 64px;
-  z-index: 1;
-  width: 730px;
+  max-width: 730px;
   font-size: 102px;
   font-weight: bold;
   line-height: 96px;
 }
 
 .header__subtitle{
+  padding: 0;
+  margin: 0;
   position: absolute;
-  width: 388px;
+  max-width: 388px;
   left: 64px;
   bottom: 30px;
   line-height: 29px;
@@ -65,6 +65,9 @@
 
 .header__main-illustration{
   position: absolute;
+  width: 765px;
+  height: 608px;
+  object-fit: contain;
   bottom: 0;
   right: 0;
   z-index: -1;
@@ -90,69 +93,75 @@
   justify-content: center;
 }
 
-.description__two-columns{
+.two-columns{
   margin: 100px auto 0;
   width: 80%;
   display: flex;
   justify-content: space-between;
+
 }
 
-.description__brief{
+.two-columns__brief{
+  margin: 0;
   display: flex;
   width: 175px;
-}
-
-.description__main-text{
-  width: 80%;
-  min-width: 784px;
-}
-
-.description__brief_style{
   color:#2f80ed;
   font-size: 18px;
   font-weight: normal;
   line-height: 1.2;
+
 }
 
-.description__main-text__text-style{
+.two-columns__main-text{
+  margin: 0;
+  width: 80%;
+  min-width: 784px;
+
+}
+
+.two-columns__paragraph{
+  margin: 30px 0 0;
   font-size: 24px;
   font-weight: normal;
   line-height: 34px;
+
 }
 
-.highlighter{
+.two-columns__span-accent{
   font-size: 24px;
   font-weight: bold;
   line-height: 34px;
+}
+
+.two-columns__paragraph:first-child{
+  margin: 0;
 }
 /*---end section description---*/
 
 .digits{
   margin: 0;
   padding: 0;
-
 }
 
-.digits__title{
-  position: relative;
-  margin: 100px auto auto;
-  width: 60%;
+.section__title{
+  margin: 100px auto 0;
+  max-width: 60%;
   text-align: center;
   line-height: 1.15;
   font-size: 60px;
   font-weight: bold;
 }
 
-.digits__subtitle{
+.section__subtitle{
   margin: 20px auto auto;
-  width: 60%;
+  max-width: 60%;
   text-align: center;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
 }
 
-.digits__table{
+.table{
   width: 1100px;
   margin: 0 auto 100px;
   display: flex;
@@ -163,13 +172,16 @@
 
 .table__cell{
   width: 250px;
-  margin-top: 60px;
+  margin: 60px 0 0 0;
+  padding: 0;
+  list-style-type: none;
   display: flex;
   flex-direction: column;
-
 }
 
 .table__heading{
+  padding: 0;
+  list-style-type: none;
   line-height: 1.15;
   font-size: 24px;
   font-weight: bold;
@@ -178,6 +190,8 @@
 }
 
 .table__text {
+  padding: 0;
+  list-style-type: none;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
@@ -189,20 +203,21 @@
 .feynman{
   margin: 0;
   padding: 0;
-  height: 890px;
+  min-height: 890px;
   position: relative;
+  display: flex;
+  flex-direction: column;
   background-color: #f2f2f2;
-  background-image: url("/images/feynman.png");
+  background-image: url("../images/feynman.png");
   background-size: 867px 637px;
   background-repeat: no-repeat;
   background-position: bottom left;
 }
 
 .feynman__title{
-  position: inherit;
+  padding: 0;
+  margin: 100px auto 0;
   width: 648px;
-  margin: 100px auto auto;
-  top: 100px;
   line-height: 1.15;
   font-size: 120px;
   font-weight: bold;
@@ -210,8 +225,8 @@
 }
 
 .feynman__subtitle{
-  position: inherit;
-  top: 70px;
+  padding: 0;
+  margin: 70px auto 0;
   text-align: center;
   line-height: 51px;
   font-size: 36px;
@@ -226,6 +241,7 @@
   font-size: 36px;
   font-weight: normal;
   text-decoration: none;
+  color:#2f80ed;
 
 }
 /*---end feynman---*/
@@ -236,41 +252,40 @@
   background-color: #1f1f1f;
   overflow: hidden;
   position: relative;
+  z-index: -1;
 }
 
 .kaufman__triangle{
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/kaufman-triangle.svg");
   position: absolute;
   right: -210px;
   top: 0;
   z-index: -1;
+  width: 877px;
+  height: 877px;
 }
 
-.kaufman__title_theme_dark{
+.section__title_theme_dark{
+  padding: 0;
   width: 60%;
-  position: inherit;
-  margin: 90px auto auto;
+  margin: 90px auto 0;
   text-align: center;
-  line-height: 1.15;
   color: white;
-  font-size: 60px;
-  font-weight: bold;
-
 }
 
-.kaufman__subtitle_theme_dark{
-  position: relative;
+.section__subtitle_theme_dark{
+  padding: 0;
   width: 60%;
   margin: 20px auto 0;
   text-align: center;
   color: white;
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: normal;
 }
 
-.kaufman__table_theme_dark{
+.table_theme_dark{
   margin: 0 auto 90px;
-
+  padding: 0;
 }
 
 /* и элемента с модификатором вида ключ-значение */
@@ -279,19 +294,10 @@
   color: white;
   margin-right: 0;
   margin-top: 80px;
+  z-index: 1;
+
 }
 
-.table__heading_theme_dark {
-  line-height: 1.15;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.table__text_theme_dark{
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: normal;
-}
 /*---end kaufman---*/
 
 .footer{
@@ -300,15 +306,14 @@
   min-height: 350px;
   background-color: #1f1f1f;
   display: flex;
-
 }
 
 .footer__columns{
+  padding: 0;
   margin: 60px auto 40px;
   width: 90%;
   display: flex;
   justify-content: space-between;
-
 }
 
 .footer__column_content_copyright{
@@ -317,15 +322,16 @@
   flex-direction: column;
   justify-content: space-between;
   flex-basis: 711px;
-  list-style: none;
+  list-style-type: none;
   padding-left: 0;
 }
 
 .logo_place_footer{
-  background-image: url("/images/logo_place_footer.svg");
+  background-image: url("../images/logo_place_footer.svg");
 }
 
 .footer__author{
+  padding: 0;
   margin-top: 18px;
   margin-bottom: 18px;
   line-height: 25px;
@@ -342,12 +348,11 @@
 .footer__column_content_social{
   margin: 0;
   padding:0;
-
 }
 
 .footer__column-heading{
-  margin-bottom: 20px;
-  list-style: none;
+  margin: 0 0 20px;
+  list-style-type: none;
   color: white;
   line-height: 30px;
   font-size: 18px;
@@ -355,7 +360,10 @@
 }
 
 .footer__column-links{
-  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
   color: white;
   line-height: 30px;
   font-size: 18px;
@@ -366,6 +374,24 @@
   margin-bottom: 16px;
 }
 
-.footer__link{
-  margin-right: 10px;
+.footer__column-link{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  color: white;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
 }
+
+.footer__social-icon{
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin: 0 10px 0 0;
+}
+
+.footer__column-link:last-child{
+  margin-bottom: 16px;
+}
+
