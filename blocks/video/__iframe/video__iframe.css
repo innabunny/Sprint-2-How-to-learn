@@ -1,0 +1,5 @@
+.video__iframe{
+  min-width: 516px;
+  min-height: 316px;
+  object-fit: contain;
+}

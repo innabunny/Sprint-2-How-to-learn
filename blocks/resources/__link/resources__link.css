@@ -1,0 +1,13 @@
+.resources__link{
+  width: 270px;
+  height: 38px;
+  display: block;
+  box-sizing: border-box;
+}
+
+.resources__link:hover{
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.42);
+  border: 1px solid grey;
+  border-radius: 9px;
+  transition: filter 1s linear;
+}
