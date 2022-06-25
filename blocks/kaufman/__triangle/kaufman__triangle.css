@@ -9,8 +9,5 @@
   z-index: -1;
   width: 877px;
   height: 877px;
-  animation-name: rotation;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+
 }
